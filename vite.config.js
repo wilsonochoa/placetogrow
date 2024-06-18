@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
     plugins: [
@@ -10,4 +10,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: true,
+        hmr: {
+            clientPort: 5173,host: 'localhost',},
+    },
 });
