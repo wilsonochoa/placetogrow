@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd mbstring pdo pdo_mysql zip opcache
+    && docker-php-ext-install gd mbstring pdo pdo_mysql mysqli zip opcache
 
 #COMPOSER
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
