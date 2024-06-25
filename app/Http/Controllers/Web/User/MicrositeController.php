@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Web\User\UpdateUserPostRequest;
 use Inertia\Inertia;
 
-class UserController extends Controller
+class MicrositeController extends Controller
 {
     public function index(): \Inertia\Response
     {
