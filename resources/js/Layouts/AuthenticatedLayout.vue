@@ -33,6 +33,13 @@ const showingNavigationDropdown = ref(false);
                                     Dashboard
                                 </NavLink>
                             </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink
+                                    v-if="$page.props.rol.roles[0] === 'Admin'"
+                                    :href="route('microsite.index')" :active="route().current('microsite.index')">
+                                    {{ $page.props.$t.microsites.title }}
+                                </NavLink>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
